@@ -3,6 +3,7 @@
     {{view === 'gallery' ? 'gallery' : 'table'}}
 </button>
 
+
 <ng-container *ngIf = 'view === "gallery" then galleryTemplate else tableTemplate'>
     {{view}}
 </ng-container>
