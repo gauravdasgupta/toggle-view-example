@@ -1,0 +1,16 @@
+
+<button (click)='toggleView()'>
+    {{view === 'gallery' ? 'gallery' : 'table'}}
+</button>
+
+<ng-container *ngIf = 'view === "gallery" then galleryTemplate else tableTemplate'>
+    {{view}}
+</ng-container>
+
+<ng-template #galleryTemplate>
+    <app-fs-image-gallery-view></app-fs-image-gallery-view>
+</ng-template>
+
+<ng-template #tableTemplate>
+    <app-fs-image-tabular-view></app-fs-image-tabular-view>
+</ng-template>
